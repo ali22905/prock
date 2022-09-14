@@ -22,6 +22,13 @@ app.get('/', (req, res) => {
 
 
 
+// if the page entered is not found 
+app.use((req, res) => {
+    res.status(404).send("<h1>sorry! page not found</h1>")
+  })
+
+
+
 
 app.listen( process.env.PORT  ||   port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
