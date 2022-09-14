@@ -4,7 +4,7 @@ const port = 3000;
 const path = require('path');
 const helmet = require("helmet");
 // to change the defult path of the views directory
-app.set('views', path.join(__dirname, './views'));
+app.set('views', path.join(__dirname, '/views'));
 // to act like you are in the views directory
 app.set('view engine','ejs');
 app.use(express.static('public'));
@@ -23,6 +23,6 @@ app.get('/', (req, res) => {
 
 
 
-app.listen(port, () => {
+app.listen( process.env.PORT  ||   port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
 })
