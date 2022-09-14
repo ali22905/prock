@@ -191,16 +191,13 @@ header .end a:hover{
     border: none;
     border-radius: 5px;
     margin-top: 10px;
-    animation-name:az ;
-    animation-duration: 2s; 
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    transition: .3s;
 }
 .landing .container .text button:hover{
     animation-name: az;
     animation-play-state: paused;
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 @keyframes az{
     to{
