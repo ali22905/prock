@@ -1,0 +1,642 @@
+/* Start variable */
+:root{
+    --main-transtion: 0.3s;
+    --main-color: #44e5e7;
+    --text-color: #9999;
+    --border-padding: 10px 15px;
+}
+/* End variable */
+/* Start global rules  */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+}
+a{ 
+    text-decoration: none;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+    width: 750px;
+    }
+}
+  /* Medium */
+@media (min-width: 992px) {
+    .container {
+    width: 970px;
+    }
+}
+  /* Large */
+@media (min-width: 1200px) {
+    .container {
+    width: 1170px;
+    }
+}
+/* End global rules  */
+/* Start header  */
+header{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fcfcfc;
+}
+header img{
+    width: 100px;
+    margin-left:  30px;
+}
+header .container{
+    position: relative;
+    text-align: center;
+
+}
+@media (max-width: 767px){
+    header .container
+    {
+        display: none;
+    }
+}
+header .container a{
+    color: black;
+    margin-right: 25px ;
+    margin-left: 25px ;
+    padding: 10px 15px;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+    border-radius: 10px;
+    display: inline-block;
+}
+header .container a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: -2px;
+    left: -100%;
+    background-color: var(--main-color);
+    transition: .3s;
+}
+header .container a:hover:before {
+    left: 0;    
+}
+header .container a:hover {
+    background-color: #d3d3d365;
+    color: var(--main-color);   
+}
+header .end{
+    margin: auto 30px;
+}
+header .end i{
+    transform: rotate(90deg);
+}
+header .end a{
+    color: black;
+    font-weight: 500;
+    transition: var(--main-transtion);
+    border-radius: 10px;
+    padding: var(--border-padding);
+}
+header .end a:hover{
+    color: black;
+    font-weight: 500;
+    color: white;
+    background-color: var(--main-color);
+}
+/* End header  */
+/* Start landing */
+.landing{
+    background-image: url(./images/landing\ 2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+}
+.landing .container{
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.landing .container .text {
+    padding: 120px 80px;
+    border: 2px solid white;
+    border-top:none ;
+    position: relative;
+}
+.landing .container .text::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: white;
+    width: 88%;
+    top: 0;
+    left: 12.2%;
+}
+
+.landing .container .text::before {
+    content: "Prock";
+    position: absolute;
+    top: -2%;
+    left: 3%;
+    color: white;
+    font-weight: 500;
+    font-size: large;
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent ;
+}
+
+.landing .container .text h1{
+    font-size: 80px;
+    margin: 0 0 40px 0;
+    color: white;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+@media (max-width: 767px) {
+    .landing .container .text h1{
+        font-size: 40px;
+    }
+}
+.landing .container .text button{
+    padding: var(--border-padding);
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    animation-name:az ;
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.landing .container .text button:hover{
+    animation-name: az;
+    animation-play-state: paused;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+@keyframes az{
+    to{
+    transform: translate(0px,50px) ;
+    }
+}
+/* End landing */
+/* Start portofolio */
+.portofolio{
+    height: 80vh;
+    background-image: linear-gradient(to right, white 40%,var(--main-color) 40% );
+    position: relative;
+}
+.portofolio .container{
+    display: flex;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+}
+@media (max-width: 767px){
+    .portofolio .container{
+    height: 85%;
+    display: block;
+    }
+}
+.portofolio .container .imgae{
+    display: flex;
+    justify-content:center;
+    flex-basis: 55%;
+    top: 40px;
+}
+.portofolio .container .imgae::before{
+    content: '';
+    position: absolute;
+    top: 10.5%;
+    background-color: var(--text-color);
+    width: 30px;
+    height: 3px;
+    right: 87%;
+    border-radius: 30px;
+}
+.portofolio .container .imgae::after{
+    content: "prock";
+    position: absolute;
+    top: 8.5%;
+    right: 92%;
+    color: var(--text-color);
+    font-size: small;
+}
+@media (max-width: 767px){
+    .portofolio .container .imgae::after,
+    .portofolio .container .imgae::before{
+        display: none;
+    }
+}
+.portofolio .container .imgae img{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.portofolio .container .text{
+    width: 100%;
+    margin-left: 50px;
+    position: relative;
+}
+@media (max-width: 767px){
+    .portofolio .container .text{
+        margin: 0;
+        text-align: center ;
+    }
+}
+.portofolio .container .text h1{
+    font-size: 60px;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 767px){
+    .portofolio .container .text h1{
+        margin-bottom: 10px ;
+    }
+}
+.portofolio .container .text p span{
+    color: black;   
+}
+.portofolio .container .text p{
+    color: var(--text-color);
+}
+.portofolio .container .text p:first-of-type{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.portofolio .container .text p:first-of-type::after{
+    content: '';
+    position: absolute;
+    left: 0px;
+    background-color: var(--text-color);
+    width: 50px;
+    height: 3px;
+    top: 200%;
+    border-radius: 30px;
+}
+@media (max-width: 767px){
+    .portofolio .container .text p:first-of-type{
+    margin:  10px auto;
+    }
+}
+.portofolio .container .text p:last-of-type{
+    line-height: 2;
+}
+@media (max-width: 767px){
+    .portofolio .container .text p:first-of-type::after{
+        display: none;
+    }
+}
+@media (max-width: 767px){
+    .portofolio .container .text p:last-of-type{
+        display: none;
+    }
+}
+.portofolio .container .text button{
+    position: relative;
+    left: 35%;
+    top: 110%;
+    padding: var(--border-padding);
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    animation-name:az ;
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@media (max-width: 767px){
+    .portofolio .container .text button{
+        position: absolute;
+        left: 31%;
+        animation-play-state: paused;
+        top: 90%;
+    }
+}
+.portofolio .container .text button:hover{
+    animation-name: az;
+    animation-play-state: paused;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+/* End portofolio */
+/* start skills  */
+.skills{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: linear-gradient(to right, var(--main-color) 40%, white 40% );
+}
+.skills .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
+}
+.skills .container::before{
+    content: '';
+    position: absolute;
+    left: 87%;
+    background-color: var(--text-color);
+    width: 30px;
+    height: 3px;
+    top: 10.5%;
+    border-radius: 30px;
+}
+.skills .container::after{
+    content: "prock";
+    position: absolute;
+    top: 8.5%;
+    left: 92%;
+    color: var(--text-color);
+    font-size: small;
+}
+@media (max-width: 767px){
+    .skills .container::before
+    , .skills .container::after{
+    display: none;
+    }
+}
+@media (min-width: 992px) {
+    .skills .container > div {
+    flex-basis: 45%;
+    }
+}
+.skills .container h1{
+    width: 100%;
+    text-align: center;
+}
+.skills .container h1  span{
+    color: var(--main-color);
+}
+.skills .skill .prog-holder {
+    margin-bottom: 40px;
+}
+.skills .skill .prog-holder h4 {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.skills .skill .prog-holder .prog {
+    background-color: #dedadc;
+    height: 20px;
+    border-radius: 15px;
+}
+.skills .skill .prog-holder .prog span {
+    display: block;
+    background-color: var(--main-color);
+    height: 100%;
+    position: relative;
+    border-radius: 15px;
+}
+/* end skills  */
+/* Start services  */
+.services{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: linear-gradient(to bottom, var(--main-color) 50%, white 50% );
+}
+.services .container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    flex-direction: column;
+}
+.services .container .text{
+    flex-basis: 50%;
+    padding-bottom: 50px;
+    color: white;
+}
+.services .container .text h1{
+    font-size: 45px;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.services .container .text p{
+    line-height: 1.5;
+}
+.services .container .text button{
+    margin-top: 30px;
+    margin-bottom: 80px;
+    padding: var(--border-padding);
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    transition-delay:1.5s ;
+}
+@keyframes ae{
+    to{
+        transform: scale(1.2) rotate(360deg);
+    }
+}
+
+.services .container .text button:hover{
+    animation-name: ae;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    color: var(--main-color);
+    cursor: pointer;
+}
+.services .container .service{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+@media (max-width: 767px){
+    .services .container .service{
+        flex-direction: column;
+        margin-top: 150px;
+    }
+}
+.services .container .service .srv{
+    flex-basis: 30%;
+}
+@media (max-width: 767px){
+    .services .container .service .srv{
+        margin-top: 20px;
+    }
+}
+.services .container .service .srv i{
+    font-size: 80px;
+    margin-bottom: 10px;
+    color: var(--main-color);
+}
+
+.services .container .service .srv p:first-of-type{
+    font-size: medium;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+@media (max-width: 767px){
+    .services .container .service .srv p:first-of-type{
+        margin-bottom: 30px;
+    }
+}
+
+/* End services  */
+/* Start contact  */
+.contact{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 80vh;
+    background-image: url(./images/contact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media (max-width: 767px) {
+    .contact {
+    height: 140vh;
+    }
+}
+.contact .container {
+    color: white;
+    height: 100%;
+}
+.contact .container > h1{
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+.contact .con{
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+}
+@media (max-width: 767px) {
+    .contact .con {
+    flex-direction: column;
+    }
+}
+.contact .con .text{
+    flex-basis: 45%;
+}
+
+
+.contact .con .text p:nth-of-type(3){
+    margin: 30px 0 ;
+}
+.contact .con .text a{
+    margin-bottom: 30px;
+    color: var(--main-color);
+    background-color: white;
+    font-weight: bold;
+    padding: var(--border-padding);
+    border-radius: 15px;
+    transition: var(--main-transtion);
+}
+.contact .con .text a:hover{
+    color: black;
+    cursor: pointer;
+}
+.contact .con .text .social{
+    margin-top: 70px;
+}
+@media (max-width: 767px) {
+    .contact .con .text .social{
+    display: none;
+    }
+}
+.contact .con .text .social i{
+    padding: 10px;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin-right: 5px;
+    background-color: white;
+    font-size: 20px;
+    transition: var(--main-transtion);
+}
+.contact .con .text .social i:hover{
+    color: black;
+    cursor: pointer;
+}
+.contact .con .content{
+    flex-basis: 45%;
+}
+.contact .content form .main-input {
+    padding: 20px;
+    display: block;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    width: 100%;
+    border-radius: 10px;
+}
+.contact .content form .main-input:focus {
+    outline: none;
+}
+.contact .content form textarea.main-input {
+    height: 200px;
+}
+.contact .content button{
+    padding: var(--border-padding);
+    background-color: white;
+    color: var(--main-color);
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    transition: var(--main-transtion);
+}
+.contact .content button:hover{
+    color: black;
+    cursor: pointer;
+}
+/* End contact  */
+/* Start footer  */
+footer{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: white;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .container img{
+    width: 100px;
+}
+footer .container p span{
+    color: var(--main-color);
+}
+footer .container p {
+    font-weight: bold;
+}
+/* End footer  */
