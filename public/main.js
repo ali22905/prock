@@ -54,3 +54,18 @@ login.addEventListener('submit', e => {
   }
 })
 // eval(`var value${i} = 1;`)
+
+
+
+let instagram = document.getElementById('instagram');
+let facebook = document.getElementById('facebook');
+
+instagram.addEventListener('click', () => {
+    window.location.href = 'https://www.instagram.com/3bd_llah_/';
+})
+
+facebook.addEventListener('click', () => {
+    window.location.href = 'https://www.facebook.com/abdallah.tarek.353';
+})
+
+
