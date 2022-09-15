@@ -137,6 +137,11 @@ header .end a:hover{
     position: relative;
     background-attachment: fixed;
 }
+@media (max-width: 767px){
+    .landing{
+    background-attachment: unset;
+    }
+}
 .landing .container{
     position: relative;
     top: 50%;
@@ -213,7 +218,7 @@ header .end a:hover{
 }
 .portofolio .container{
     display: flex;
-    height: 70%;
+    height: 80%;
     justify-content: center;
     align-items: center;
     background-color: white;
@@ -226,8 +231,9 @@ header .end a:hover{
 }
 @media (max-width: 767px){
     .portofolio .container{
-    height: 85%;
+    height: 90%;
     display: block;
+    margin: 20px;
     }
 }
 .portofolio .container .imgae{
@@ -235,6 +241,11 @@ header .end a:hover{
     justify-content:center;
     flex-basis: 55%;
     top: 40px;
+}
+@media (max-width: 767px){
+    .portofolio .container .imgae{
+        padding: 15px 0 0 0;
+    }
 }
 .portofolio .container .imgae::before{
     content: '';
@@ -343,7 +354,7 @@ header .end a:hover{
         position: absolute;
         left: 31%;
         animation-play-state: paused;
-        top: 90%;
+        top: 140%;
     }
 }
 .portofolio .container .text button:hover{
@@ -367,6 +378,12 @@ header .end a:hover{
     border-radius: 15px;
     background-color: white;
     position: relative;
+}
+@media (max-width: 767px){
+    .skills .container{
+    justify-content:space-around ;
+    margin: 20px;
+    }
 }
 .skills .container::before{
     content: '';
