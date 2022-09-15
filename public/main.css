@@ -197,6 +197,10 @@ header .end a:hover{
     border-radius: 5px;
     margin-top: 10px;
     transition: .3s;
+    animation-name: az;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 .landing .container .text button:hover{
     animation-name: az;
