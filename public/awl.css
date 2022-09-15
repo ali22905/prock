@@ -1,0 +1,168 @@
+/* Start variable */
+:root{
+    --main-transtion: 0.3s;
+    --main-color: #44e5e7;
+    --second-color: rgb(155 155 155 / 54%)
+}
+/* End variable */
+/* Start global rules  */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+}
+a{ 
+    text-decoration: none;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+    width: 750px;
+    }
+}
+  /* Medium */
+@media (min-width: 992px) {
+    .container {
+    width: 970px;
+    }
+}
+  /* Large */
+@media (min-width: 1200px) {
+    .container {
+    width: 1170px;
+    }
+}
+/* End global rules  */
+/* Start contact  */
+.contact{
+    height: 100vh;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact .container{
+    background-image: linear-gradient(to right, white 50% , var(--main-color) 50% );
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70vh;
+    width: 70vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.contact .container .sign-in{
+    flex-basis:50% ;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.contact .container .sign-in h1{
+    text-align: center;
+    margin-top: 155px;
+}
+.contact .container .sign-in .icons{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.contact .container .sign-in .icons i{
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+    margin: 0 5px;
+}
+.contact .container .sign-in form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.contact .container .sign-in form input{
+    width: 70%;
+    margin: 10px 5px;
+    padding: 10px;
+    border: none;
+    background-color:#f6f6f6;
+    border-radius: 10px;
+}
+.contact .container .sign-in form input::placeholder{
+    color: rgba(0, 0, 0, 0.45);
+}
+.contact .container .sign-in > p{
+    text-align: center;
+    margin: 20px 0 30px;
+    font-size: 14px;
+}
+.contact .container .sign-in button{
+    width: fit-content;
+    padding: 10px 80px ;
+    background-color: var(--main-color);
+    margin: 0 auto;
+    border: none;
+    color: white;
+    border-radius: 50px;
+    transition: var(--main-transtion);
+}
+.contact .container .sign-in button:hover{
+    background-color: black;
+    cursor: pointer;
+}
+.contact .container .sign-up{
+    flex-basis: 50%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.contact .container .sign-up p{
+    font-size: 15px;
+}
+.contact .container .sign-up button{
+    padding: 10px 80px ;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 50px;
+    margin-top: 50px;
+    transition: var(--main-transtion);
+}
+.contact .container .sign-up button:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+/* End contact  */
+
+.invalid-pass, .invalid-username, .un-pass-valid {
+    display: none;
+    font-size: 15px;
+    text-align: center;
+    color: red;
+}
+.un-pass-valid  {
+    margin-bottom: 15px;
+}

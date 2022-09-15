@@ -3,6 +3,7 @@ const app = express();
 const port = 3000;
 const path = require('path');
 const helmet = require("helmet");
+const { request } = require('http');
 // to change the defult path of the views directory
 app.set('views', path.join(__dirname, '/views'));
 // to act like you are in the views directory
@@ -14,9 +15,28 @@ app.use(helmet());
 
 
 
-
 app.get('/', (req, res) => {
+  res.redirect('/home')
+})
+
+
+app.get('/home', (req, res) => {
   res.render('index')
+})
+
+app.post('/home', (req, res) => {
+  res.redirect('/home')
+})
+
+
+app.get('/sign-in', (req, res) => {
+  res.render('sign-in')
+})
+
+
+
+app.get('/login', (req, res) => {
+  res.render('login')
 })
 
 
