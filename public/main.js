@@ -61,11 +61,11 @@ let instagram = document.getElementById('instagram');
 let facebook = document.getElementById('facebook');
 
 instagram.addEventListener('click', () => {
-    window.location.href = 'https://www.instagram.com/3bd_llah_/';
+    window.open("https://www.instagram.com/3bd_llah_/","_blank")
 })
 
 facebook.addEventListener('click', () => {
-    window.location.href = 'https://www.facebook.com/abdallah.tarek.353';
+    window.open("https://www.facebook.com/abdallah.tarek.353","_blank")
 })
 
 
